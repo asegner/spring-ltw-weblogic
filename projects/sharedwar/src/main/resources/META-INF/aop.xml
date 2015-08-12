@@ -1,0 +1,12 @@
+<!DOCTYPE aspectj PUBLIC "-//AspectJ//DTD//EN" "http://www.eclipse.org/aspectj/dtd/aspectj.dtd">
+<aspectj>
+
+    <weaver options="-verbose -showWeaveInfo -debug">
+        <include within="segner.poc.wlltw..*" />
+        <exclude within="segner.poc.wlltw..*CGLIB*"/>
+    </weaver>
+
+    <aspects>
+    </aspects>
+
+</aspectj>

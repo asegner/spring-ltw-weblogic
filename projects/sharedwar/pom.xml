@@ -1,0 +1,30 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>segner.poc.wlltw</groupId>
+        <artifactId>projects</artifactId>
+        <version>1.0</version>
+    </parent>
+
+    <artifactId>sharedwar</artifactId>
+    <packaging>war</packaging>
+
+    <dependencies>
+
+        <dependency> <!-- code intended for the spring parent context must be in the shared war-->
+            <groupId>segner.poc.wlltw</groupId>
+            <artifactId>sharedcode</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+    </build>
+</project>

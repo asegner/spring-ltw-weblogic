@@ -1,0 +1,34 @@
+<project >
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>segner.poc.wlltw</groupId>
+        <artifactId>projects</artifactId>
+        <version>1.0</version>
+    </parent>
+
+    <artifactId>warone</artifactId>
+    <packaging>war</packaging>
+
+    <dependencies>
+         <dependency>
+            <groupId>segner.poc.wlltw</groupId>
+            <artifactId>sharedcode</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
+
+        <dependency> <!-- this dependency is not used, its here to help demo the skinny war processing-->
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+    </build>
+
+</project>

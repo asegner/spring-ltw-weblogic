@@ -1,0 +1,123 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>segner.poc.wlltw</groupId>
+    <version>1.0</version>
+    <artifactId>demo</artifactId>
+    <packaging>pom</packaging>
+
+    <name>demo</name>
+
+    <modules>
+        <module>projects</module>
+        <module>demo-ear</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <springframework.version>4.1.3.RELEASE</springframework.version>
+        <aspectj.version>1.8.2</aspectj.version>
+        <communalwar-plugin.version>1.0-SNAPSHOT</communalwar-plugin.version>
+        <joda-time.version>2.3</joda-time.version>
+        <maven-ear-plugin.version>2.10.1</maven-ear-plugin.version>
+    </properties>
+
+    <!--
+
+    Do not place concrete dependencies or plugins in this pom.
+    Use this pom only to define properties, define versions (via properties) and set up dependency/plugin management.
+    Place EAR scoped dependencies in ear/pom.xml. EAR scoped dependecies are NOT weavable without a javaagent.
+    Shared (and weavable) dependencies should be placed in projects/sharedwar/pom.xml
+
+     -->
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>segner.poc.wlltw</groupId>
+                <artifactId>warone</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+            </dependency>
+
+            <dependency>
+                <groupId>segner.poc.wlltw</groupId>
+                <artifactId>wartwo</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+            </dependency>
+
+            <dependency>
+                <groupId>segner.poc.wlltw</groupId>
+                <artifactId>sharedwar</artifactId>
+                <version>${project.version}</version>
+                <type>war</type>
+            </dependency>
+
+            <dependency>
+                <groupId>segner.poc.wlltw</groupId>
+                <artifactId>sharedcode</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aspects</artifactId>
+                <version>${springframework.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${springframework.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
+                <version>${springframework.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>${springframework.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-tx</artifactId>
+                <version>${springframework.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjweaver</artifactId>
+                <version>${aspectj.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>joda-time</groupId>
+                <artifactId>joda-time</artifactId>
+                <version>${joda-time.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+
+                <plugin>
+                    <groupId>communalwar-maven-plugin</groupId>
+                    <artifactId>communalwar-maven-plugin</artifactId>
+                    <version>${communalwar-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-ear-plugin</artifactId>
+                    <version>${maven-ear-plugin.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>

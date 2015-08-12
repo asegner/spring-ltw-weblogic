@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<weblogic-application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                      xmlns="http://xmlns.oracle.com/weblogic/weblogic-application"
+                      xsi:schemaLocation="http://xmlns.oracle.com/weblogic/weblogic-application
+         http://xmlns.oracle.com/weblogic/weblogic-application/1.4/weblogic-application.xsd">
+
+    <prefer-application-packages>
+        <package-name>org.aspectj..*</package-name>
+    </prefer-application-packages>
+
+    <prefer-application-resources>
+        <resource-name>org.aspectj..*</resource-name>
+    </prefer-application-resources>
+
+    <classloader-structure>
+        <module-ref>
+            <module-uri>sharedwar.war</module-uri>
+        </module-ref>
+
+        <classloader-structure>
+            <module-ref>
+                <module-uri>warone.war</module-uri>
+            </module-ref>
+        </classloader-structure>
+        <classloader-structure>
+            <module-ref>
+                <module-uri>wartwo.war</module-uri>
+            </module-ref>
+        </classloader-structure>
+    </classloader-structure>
+
+</weblogic-application>
