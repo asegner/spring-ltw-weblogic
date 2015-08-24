@@ -108,7 +108,7 @@
             <plugins>
 
                 <plugin>
-                    <groupId>communalwar-maven-plugin</groupId>
+                    <groupId>net.segner.maven.plugins</groupId>
                     <artifactId>communalwar-maven-plugin</artifactId>
                     <version>${communalwar-plugin.version}</version>
                 </plugin>
