@@ -26,10 +26,6 @@
             <artifactId>sharedwar</artifactId>
             <type>war</type>
         </dependency>
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjweaver</artifactId>
-        </dependency>
     </dependencies>
 
     <build>
@@ -39,15 +35,11 @@
                 <artifactId>communalwar-maven-plugin</artifactId>
                 <configuration>
                     <communalWar>sharedwar.war</communalWar>
+                    <pinnedLibraries>
+                        <libraryPrefixFilter>spring-web-</libraryPrefixFilter>
+                    </pinnedLibraries>
                 </configuration>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>ear</goal>
-                        </goals>
-                    </execution>
-                </executions>
+                <extensions>true</extensions>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -71,7 +63,6 @@
                             <groupId>segner.poc.wlltw</groupId>
                             <artifactId>wartwo</artifactId>
                             <bundleFileName>wartwo.war</bundleFileName>
-                            <unpack>true</unpack>
                         </webModule>
                     </modules>
                     <archive>
