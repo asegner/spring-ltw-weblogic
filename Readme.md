@@ -38,11 +38,11 @@ Highlights
 </context-param>
 ```
 
-* spring context in each classloader must create LTW for that classloader, therefore there should be declared one <context:load-time-weaver /> in the parent context and one per web application
+* spring context in each classloader-structure must create LTW for that classloader, therefore there should be declared one <context:load-time-weaver /> in the parent context and one per web application
 
 * aspectjweaver is an EAR dependency so it will be available to all WARs
 
-* skinny wars automatically generated using plugin at [Communal WAR Maven Plugin](https://github.com/asegner/communalwar-maven-plugin)
+* skinny wars automatically generated using plugin at [Skinny WAR Maven Plugin](https://github.com/asegner/skinnywar-maven-plugin). The plugin will additionally generate the classloader-structure section referenced above
 
 
 What was the problem again?
@@ -75,5 +75,5 @@ their parent. To resolve this, the classloader heirarchy is modified. Weblogic's
 application classloader and the individual skinny WAR's web application classloaders. Now from a classloader point of view, the communal WAR is the parent of the skinny WARs and provides a weavable,
 shared library and spring context that is visible to all the WARS in the EAR without using a javaagent.
 
-The next step of this solution is optional. [Communal WAR Maven Plugin](https://github.com/asegner/communalwar-maven-plugin) is used to automate the creation of skinny WARs from fat WARs. This plugin
-attempts to determine what jars belong in the communal war without any additional configuration. This is one of the many ways to accomplish the packaging of skinny WARs. Maven shade plugin may be useful as well.
+The next step of this solution is optional. [Skinny WAR Maven Plugin](https://github.com/asegner/skinnywar-maven-plugin) is used to automate the creation of skinny WARs from fat WARs. This plugin
+attempts to determine what jars belong in the communal war without any additional configuration. This is one of the many ways to accomplish the packaging of skinny WARs.

@@ -7,6 +7,10 @@
 
     <name>demo</name>
 
+    <prerequisites>
+        <maven>3.2.0</maven>
+    </prerequisites>
+
     <modules>
         <module>projects</module>
         <module>demo-ear</module>
@@ -16,7 +20,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <springframework.version>4.1.3.RELEASE</springframework.version>
         <aspectj.version>1.8.2</aspectj.version>
-        <communalwar-plugin.version>1.0-SNAPSHOT</communalwar-plugin.version>
+        <skinnywar-plugin.version>1.0-SNAPSHOT</skinnywar-plugin.version>
         <joda-time.version>2.3</joda-time.version>
         <maven-ear-plugin.version>2.10.1</maven-ear-plugin.version>
     </properties>
@@ -106,11 +110,10 @@
     <build>
         <pluginManagement>
             <plugins>
-
                 <plugin>
                     <groupId>net.segner.maven.plugins</groupId>
-                    <artifactId>communalwar-maven-plugin</artifactId>
-                    <version>${communalwar-plugin.version}</version>
+                    <artifactId>skinnywar-maven-plugin</artifactId>
+                    <version>${skinnywar-plugin.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
