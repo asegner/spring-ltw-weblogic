@@ -6,7 +6,6 @@
         <version>1.0</version>
     </parent>
 
-    <groupId>segner.poc.wlltw</groupId>
     <artifactId>demo-ear</artifactId>
     <packaging>ear</packaging>
 
