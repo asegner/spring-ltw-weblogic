@@ -7,7 +7,6 @@
         <constructor-arg>
             <list>
                 <value>classpath:spring/shared-ltweaver.xml</value>
-                <value>classpath:spring/shared-caching.xml</value>
                 <value>classpath:spring/shared-services.xml</value>
             </list>
         </constructor-arg>
