@@ -1,4 +1,4 @@
-package segner.poc.wlltw.test;
+package net.segner.poc.wlltw.test;
 
 
 import org.springframework.beans.factory.SmartInitializingSingleton;

@@ -1,4 +1,4 @@
-package segner.poc.wlltw.service;
+package net.segner.poc.wlltw.service;
 
 /**
  * @author aaronsegner

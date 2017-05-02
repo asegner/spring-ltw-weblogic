@@ -1,10 +1,10 @@
-package segner.poc.wlltw.view;
+package net.segner.poc.wlltw.view;
 
+import net.segner.poc.wlltw.service.HelloService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import segner.poc.wlltw.service.HelloService;
 
 import javax.annotation.Resource;
 

@@ -1,4 +1,4 @@
-package segner.poc.wlltw.service;
+package net.segner.poc.wlltw.service;
 
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;

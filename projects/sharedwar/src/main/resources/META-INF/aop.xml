@@ -2,8 +2,8 @@
 <aspectj>
 
     <weaver options="-verbose -showWeaveInfo -debug">
-        <include within="segner.poc.wlltw..*" />
-        <exclude within="segner.poc.wlltw..*CGLIB*"/>
+        <include within="net.segner.poc.wlltw..*" />
+        <exclude within="net.segner.poc.wlltw..*CGLIB*"/>
     </weaver>
 
     <aspects>
